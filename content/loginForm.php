@@ -1,5 +1,5 @@
 <?php
-	include('config.php');
+	include('./dataAccess/config.php');
 ?>
 
 </div>
@@ -8,18 +8,18 @@
 <div id='login_form' style='text-align:center;'>
 	<div id="login_error" style='color:red; margin-bottom:10px;'>
 		<?php 
-			if($_GET[msg]=='1')
+			if($_GET['msg']=='1')
 				echo "Wrong Username or Password.";
-			elseif($_GET[msg]=='2')
+			elseif($_GET['msg']=='2')
 				echo "Logged out.";
-			elseif($_GET[msg]=='6')
+			elseif($_GET['msg']=='6')
 				echo "Registered! Please Wait For Account Approval";
-			elseif($_GET[msg]=='7')
+			elseif($_GET['msg']=='7')
 				echo "Your account has not yet been approved.";
 		?>
 	</div>
 	
-	<form method="POST" action=<?php echo $ROOT .'dataAccess/login.php'; ?>>
+	<form method="POST" action=<?php echo './dataAccess/login.php'; ?>>
 		Name: <input type="text" name="username" size="15" style='margin-left:24px;'/><br />
 		Password: <input type="password" name="password" size="15" /><br />
 		<p><input type="submit" value="Login" style='width:200px; height:30px;'/></p>

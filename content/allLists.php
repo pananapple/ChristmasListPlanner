@@ -1,5 +1,5 @@
 	<?php
-		include('config.php');
+		include('./dataAccess/config.php');
 		
 		$sql = "SELECT * FROM userdata";
 		$result = mysqli_query($con,$sql);

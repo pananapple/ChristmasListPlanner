@@ -1,5 +1,5 @@
 <?php
-	include('config.php');
+	include('./dataAccess/config.php');
 ?>
 
 <h1 style='margin:auto; text-align:center;'>Register New Group</h1>

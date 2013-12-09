@@ -1,5 +1,5 @@
 <?php
-	include('config.php');
+	include('./dataAccess/config.php');
 ?>
 <h1>My Christmas List</h1>
 

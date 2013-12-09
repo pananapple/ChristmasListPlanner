@@ -1,5 +1,5 @@
 <?php
-	include('config.php');
+	include('./dataAccess/config.php');
 
 	//Grab Data
 	$gid = $_POST['gid'];

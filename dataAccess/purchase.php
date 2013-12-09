@@ -1,6 +1,5 @@
 <?php
-
-	include('config.php');
+	include('./dataAccess/config.php');
 	
 	//GET SETTING TO UPDATED
 	$gid = $_GET['gift'];

@@ -1,5 +1,5 @@
 <?php
-	include('config.php');
+	include('./dataAccess/config.php');
 ?>
 
 <form method='POST' action=''>

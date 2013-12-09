@@ -1,6 +1,7 @@
 <?php
-	session_start();
+	include('./dataAccess/config.php');
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -48,7 +49,7 @@
 			</div>
 
 		<?php
-			
+						
 			if($_SESSION['loggedin']!=1){
 		print "</div>";
 				//Display Login Form
@@ -93,6 +94,6 @@
 				print "</div>";
 			}
 		?>
+		
 	</body>
-
 </html>

@@ -1,5 +1,5 @@
 <?php
-	include('config.php');
+	include('./dataAccess/config.php');
 	echo "<h1>Welcome ".$_SESSION['name']."!!</h1>";
 ?>
 

@@ -1,5 +1,5 @@
 <?php
-	include('config.php');
+	include('./dataAccess/config.php');
 ?>
 <h1>Events - Add/Modify</h1>
 	
