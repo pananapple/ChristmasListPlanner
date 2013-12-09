@@ -1,3 +1,3 @@
 <?php
-	include('./dataAccess/config.php');
+	include('config.php');
 ?>

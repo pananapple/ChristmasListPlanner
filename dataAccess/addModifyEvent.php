@@ -1,5 +1,5 @@
 <?php
-	include('./dataAccess/config.php');
+	include('config.php');
 
 	//Grab Data
 	$uid = $_SESSION['id'];

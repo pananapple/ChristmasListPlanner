@@ -1,5 +1,5 @@
 <?php	
-	include('./dataAccess/config.php');
+	include('config.php');
 	
 	//GET PASSED GIFT ID
 	$uid = $_SESSION['id'];

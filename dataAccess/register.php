@@ -1,5 +1,5 @@
 <?php
-	include('./dataAccess/config.php');
+	include('config.php');
 	
 	//Grab Data
 	$name 	  = $_POST['username'];

@@ -1,5 +1,5 @@
 <?php
-	include('../dataAccess/config.php');
+	include('config.php');
 	
 	$user = stripslashes($_POST['username']);
 	$pass = stripslashes($_POST['password']);
