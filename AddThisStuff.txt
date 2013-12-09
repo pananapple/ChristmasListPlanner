@@ -1,0 +1,5 @@
+- Group ID: support group ID to group families
+
+-> Register Account
+-> Select group to join OR Register a group
+-> Leave a group
