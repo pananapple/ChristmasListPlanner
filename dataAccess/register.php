@@ -1,4 +1,6 @@
 <?php
+	include('config.php');
+	
 	//Grab Data
 	$name 	  = $_POST['username'];
 	$password = $_POST['password'];
@@ -10,11 +12,7 @@
 		header("Location: ../index.php?page=register&msg=16");
 		die();
 	}
-	
-	//CONNECT to database
-	$con = mysqli_connect("db504957107.db.1and1.com","dbo504957107","dbo504957107","db504957107");
-	if (mysqli_connect_errno()){echo "Unable to connect to database!!";}
-	
+		
 	//IF USER NAME EXISTS SEND ERROR
 	$emailsql = "SELECT * FROM userdata WHERE email = '$email'";
 	$emailresult = mysqli_query($con,$emailsql);

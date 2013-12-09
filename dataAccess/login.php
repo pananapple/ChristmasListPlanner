@@ -1,13 +1,12 @@
 <?php
+	include('config.php');
+	
 	$user = stripslashes($_POST['username']);
 	$pass = stripslashes($_POST['password']);
 	$pass = sha1($pass);
 	
 	$sql = "SELECT * FROM userdata WHERE name = '$user' AND password = '$pass'";
 	
-	//CONNECT to database
-	$con = mysqli_connect("db504957107.db.1and1.com","dbo504957107","dbo504957107","db504957107");
-	if (mysqli_connect_errno()){echo "Unable to connect to database!!";}
 	
 	//GATER data
 	$result = mysqli_query($con,$sql);

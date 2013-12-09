@@ -1,4 +1,6 @@
-
+<?php
+	include('config.php');
+?>
 <h1>Events - Add/Modify</h1>
 	
 	<!--CONNECT AND LOOP THROUGH DB HERE-->
@@ -9,9 +11,6 @@
 		
 		//CHECK IF EID EXISTS
 		if($eid != ""){
-			//CONNECT to database
-			$con = mysqli_connect("db504957107.db.1and1.com","dbo504957107","dbo504957107","db504957107");
-			if (mysqli_connect_errno()){echo "Unable to connect to database!!";}
 			
 			//GRAB EID
 			$sql = "SELECT * FROM events WHERE id=$eid";
@@ -22,7 +21,7 @@
 		//INSERT EDIT FORM
 		
 	?>
-		<form method="POST" action=<?php echo $ROOT .'dataAccess/addModifyEvent.php'; ?>>
+		<form method="POST" action=<?php echo '../dataAccess/addModifyEvent.php'; ?>>
 	<?php
 		print "<table id='addmodify' style='margin:auto; text-align:left;'>
 		<tr> <td>Event:</td> <td><input type='text' name='event' value='".$row['event']."'/></td></tr>

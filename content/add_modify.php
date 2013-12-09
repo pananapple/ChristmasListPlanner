@@ -1,3 +1,7 @@
+<?php
+	include('config.php');
+?>
+
 <h1>My Christmas List - Edit Item</h1>
 
 	<div style='text-align:center; margin-bottom:10px;'>
@@ -9,10 +13,6 @@
 	
 		//GET PASSED GIFT ID
 		$MODGID = $_GET['mod'];
-		
-		//CONNECT to database
-		$con = mysqli_connect("db504957107.db.1and1.com","dbo504957107","dbo504957107","db504957107");
-		if (mysqli_connect_errno()){echo "Unable to connect to database!!";}
 		
 		$sql = "SELECT * FROM gifts WHERE id = '".$MODGID."'";
 		$result = mysqli_query($con,$sql);

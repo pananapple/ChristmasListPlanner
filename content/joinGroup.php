@@ -1,3 +1,7 @@
+<?php
+	include('config.php');
+?>
+
 <form method='POST' action=''>
 	Group Name: <input type='text' name='groupname'/>
 	Group Password: <input type='text' name='password'/>

@@ -1,4 +1,6 @@
-
+<?php
+	include('config.php');
+?>
 <h1>Event Ideas</h1>
 
 <div style='margin:20px; color:red;'>
@@ -25,10 +27,6 @@
 	
 	<!--CONNECT AND LOOP THROUGH DB HERE-->
 	<?php
-		
-		//CONNECT to database
-		$con = mysqli_connect("db504957107.db.1and1.com","dbo504957107","dbo504957107","db504957107");
-		if (mysqli_connect_errno()){echo "Unable to connect to database!!";}
 		
 		//GRAB EVENTS
 		$sql = "SELECT * FROM events";

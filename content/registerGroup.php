@@ -1,3 +1,7 @@
+<?php
+	include('config.php');
+?>
+
 <h1 style='margin:auto; text-align:center;'>Register New Group</h1>
 
 <form style='margin:auto; margin:10px; text-align:center;' method='POST' action='/dataAccess/registerGroup.php'>

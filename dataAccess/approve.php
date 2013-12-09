@@ -1,11 +1,8 @@
 <?php
+	include('config.php');
 
 	//GET PASSED GIFT ID
 	$uid = $_GET['uid'];
-	
-	//CONNECT to database
-	$con = mysqli_connect("db504957107.db.1and1.com","dbo504957107","dbo504957107","db504957107");
-	if (mysqli_connect_errno()){echo "Unable to connect to database!!";}
 	
 	$sql = "UPDATE userdata SET approved='1' WHERE id='$uid'";
 	mysqli_query($con,$sql);

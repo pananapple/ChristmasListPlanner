@@ -1,9 +1,6 @@
 <?php
-	session_start();
-	
-	//CONNECT to database
-	$con = mysqli_connect("db504957107.db.1and1.com","dbo504957107","dbo504957107","db504957107");
-	if (mysqli_connect_errno()){echo "Unable to connect to database!!";}
+
+	include('config.php');
 	
 	//GET SETTING TO UPDATED
 	$gid = $_GET['gift'];

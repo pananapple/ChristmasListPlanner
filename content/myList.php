@@ -1,4 +1,6 @@
-
+<?php
+	include('config.php');
+?>
 <h1>My Christmas List</h1>
 
 <div style='margin:20px; color:red;'>
@@ -18,11 +20,7 @@
 	
 	<!--CONNECT AND LOOP THROUGH DB HERE-->
 	<?php
-		
-		//CONNECT to database
-		$con = mysqli_connect("db504957107.db.1and1.com","dbo504957107","dbo504957107","db504957107");
-		if (mysqli_connect_errno()){echo "Unable to connect to database!!";}
-		
+				
 		$sql = "SELECT * FROM gifts WHERE uid = '".$_SESSION['id']."'";
 		$result = mysqli_query($con,$sql);
 		$count  = mysqli_num_rows($result);

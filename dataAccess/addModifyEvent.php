@@ -1,5 +1,5 @@
 <?php
-	session_start();
+	include('config.php');
 
 	//Grab Data
 	$uid = $_SESSION['id'];
@@ -7,9 +7,6 @@
 	$event = $_POST['event'];
 	$details = $_POST['details'];
 	
-	//CONNECT to database
-	$con = mysqli_connect("db504957107.db.1and1.com","dbo504957107","dbo504957107","db504957107");
-	if (mysqli_connect_errno()){echo "Unable to connect to database!!";}
 	
 	//IF GID EXISTS FIND AND UPDATE
 	if($eid != ""){

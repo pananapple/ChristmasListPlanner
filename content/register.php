@@ -1,3 +1,7 @@
+<?php
+	include('config.php');
+?>
+
 </div>
 <h1 style='text-align:center;'>Register</h1>
 
