@@ -47,8 +47,7 @@
 						print "User has been approved!";
 					}elseif($_GET['msg']==11){
 						print "You have been confirmed! Login or Register to continue.";
-					}
-					
+					}					
 				?>
 			</div>
 

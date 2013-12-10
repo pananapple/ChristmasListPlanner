@@ -12,6 +12,32 @@
 		header("Location: ../index.php?page=register&msg=16");
 		die();
 	}
+	
+	//TEST DATA
+	
+		//CHECK EMAIL
+		if(!filter_var($email, FILTER_VALIDATE_EMAIL )){
+			//REDIRECT
+			header("Location: ../index.php?page=register&msg=17");
+			die();
+		}
+		
+		
+		//CHECK USERNAME
+		if (!ctype_alnum($name)) {
+			//REDIRECT
+			header("Location: ../index.php?page=register&msg=18");
+			die();
+		}
+		
+		
+		//CHECK PASSWORD
+		if (!preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).*$#", $password)){
+		    //REDIRECT
+		    header("Location: ../index.php?page=register&msg=19");
+			die();
+		}
+	
 		
 	//IF USER NAME EXISTS SEND ERROR
 	$emailsql = "SELECT * FROM userdata WHERE email = '$email'";
