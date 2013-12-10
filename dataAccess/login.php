@@ -36,6 +36,7 @@
 		$_SESSION['id']       = $row['id'];
 		$_SESSION['gid']      = $row2['id'];
 		$_SESSION['loggedin'] = 1;
+		$_SESSION['email']    = $row['email'];
 		
 		
 		header("location: ../index.php");

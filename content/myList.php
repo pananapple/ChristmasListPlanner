@@ -23,7 +23,6 @@
 				
 		$sql = "SELECT * FROM gifts WHERE uid = '".$_SESSION['id']."'";
 		$result = mysqli_query($con,$sql);
-		$count  = mysqli_num_rows($result);
 		
 		while($row = mysqli_fetch_array($result)){
 			print "<tr>";

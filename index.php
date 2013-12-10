@@ -43,8 +43,12 @@
 			
 			<div id='msgs' style='text-align:center; color:red; margin-bottom:10px;'>
 				<?php
-					if($_GET['msg']==10)
+					if($_GET['msg']==10){
 						print "User has been approved!";
+					}elseif($_GET['msg']==11){
+						print "You have been confirmed! Login or Register to continue.";
+					}
+					
 				?>
 			</div>
 
@@ -54,9 +58,11 @@
 		print "</div>";
 				//Display Login Form
 				if($_GET['page']=='register'){
-						include('content/register.php');
+					include('content/register.php');
+				}elseif($_GET['page']=='joinGroup'){
+					include('content/joinGroup.php');
 				}else{
-				include('content/loginForm.php');
+					include('content/loginForm.php');
 				}
 				
 				//OR DISPLAY SELECTED PAGE CONTENT
@@ -67,9 +73,10 @@
 					<a href='index.php?page=myList'>My List</a> | 
 					<a href='index.php?page=allLists'>All Lists</a> | 
 					<a href='index.php?page=purchased'>My Purchases</a> | 
-					<a href='index.php?page=events'>Events</a> | 
-					<a href='dataAccess/logout.php'>Logout</a> | 
-				</div><br/>";
+					<a href='index.php?page=events'>Events</a> | ";
+					if($groupowner){echo "<a href='index.php?page=groupMembers'>Members List</a> | ";}
+					print "<a href='dataAccess/logout.php'>Logout</a> | ";
+				print "</div><br/>";
 			print "</div>";
 				print "<div id='page_content' style='text-align:center;'>";
 					
@@ -87,6 +94,10 @@
 						include('content/purchased.php');
 					}elseif($_GET['page']=='registerGroup'){
 						include('content/registerGroup.php');
+					}elseif($_GET['page']=='groupMembers'){
+						include('content/groupMembers.php');
+					}elseif($_GET['page']=='addMember'){
+						include('content/addMember.php');
 					}else{
 						include('content/home.php');
 					}
